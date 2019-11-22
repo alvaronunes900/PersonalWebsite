@@ -1,0 +1,350 @@
+body {
+    background: url("wallpaper.png") fixed;
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 28px;
+}
+
+.navbar img {
+    float: right;
+    width: 32px;
+    height: 32px;
+}
+
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+.main {
+    display: flex;
+    color: #f2f2f2;
+    flex-flow: column;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.aboutme {
+    display: flex;
+    width: 100%;
+}
+
+.aboutme h1 {
+    color: orange;
+}
+
+.text {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.text h1 {
+    text-align: center;
+    margin-left: 20%;
+}
+
+.social {
+    float: right;
+}
+
+.social img {
+    width: 24px;
+    height: 24px;
+    padding: 5px;
+    float: right;
+    display: block;
+    margin: auto;
+}
+
+.text p {
+    text-align: justify;
+    margin: 5px;
+}
+
+.photo {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 40%;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+}
+
+.circular--square {
+    margin-top: 10%;
+    border-radius: 50%;
+}
+
+.progress {
+    margin-top: 50px;
+}
+
+.progress h1 {
+    color: orange;
+}
+
+.path h1 {
+    text-align: center;
+}
+
+.path p {
+    padding: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.gallery h1 {
+    font-size: 38px;
+    color: orange;
+}
+
+.gallery {
+    display: flex;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.Esc1 {
+    text-align: center;
+}
+
+.Esc1 img {
+    width: 100%;
+    height: 100%;
+}
+
+.Esc2 {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+}
+
+.Esc2 img {
+    width: 100%;
+    height: 100%;
+}
+
+.Esc3 {
+    text-align: center;
+}
+
+.Esc3 img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 500px;
+    margin-top: 200px;
+    position: relative;
+    display: flexbox;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 32px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: black;
+}
+
+/* Caption text */
+.ctext {
+    color: #f2f2f2;
+    font-size: 30px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.anchor {
+    height: 80px;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@media only screen and (max-width:1300px){
+
+    .anchor{
+        height:50px;
+    }
+
+    .aboutme {
+        display: inline-block;
+    }
+
+    .text h1{
+        margin-left: 0%;
+    }
+
+    .photo{
+        width:100%;
+    }
+
+    .photo img{
+        width:50%;
+        margin-left: 20%;
+    }
+
+    .circular--square {
+        border-radius: 0%;
+      }
+}
+
+
+@media only screen and (max-width: 1159px) {
+
+    .Esc1 img {
+        visibility: hidden;
+    }
+
+    .Esc2 img {
+        visibility: hidden;
+    }
+
+    .Esc3 img {
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    .social img {
+        display: inline-flex;
+        margin-left: 20%;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+
+    .aboutme {
+        display: inline-block;
+    }
+
+    .photo img {
+        width: 85%;
+        margin-top: 0%;
+        margin-left: 3%;
+    }
+
+    .social img {
+        display: inline-flex;
+        margin-left: 17%;
+    }
+
+    .Esc1 h1 {
+        font-size: 22px;
+    }
+
+    .Esc2 h1 {
+        font-size: 22px;
+    }
+
+    .Esc3 h1 {
+        font-size: 22px;
+    }
+}
