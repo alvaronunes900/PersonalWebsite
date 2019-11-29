@@ -4,42 +4,6 @@
             background-color: #cccccc;
         }
 
-        @keyframes grow-100 {
-            from {
-                width: 0%
-              }
-              to {
-                width: 100%;
-              } 
-        }
-
-        @keyframes grow-75 {
-            from {
-              width: 0%
-            }
-            to {
-              width: 75%;
-            }
-        }
-
-        @keyframes grow-50 {
-            from {
-              width: 0%
-            }
-            to {
-              width: 50%;
-            }
-        }
-
-        @keyframes grow-25 {
-            from {
-              width: 0%
-            }
-            to {
-              width: 25%;
-            }
-        }
-
         #container {
             position: relative;
             width: 100%;
@@ -61,14 +25,9 @@
             box-shadow: -2px 0 8px 0 rgba(white, 0.6);
         }
 
-        #container label div {
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: linear-gradient(to bottom, #A3E2EF 35%, #4F9CC0);
-            height: 100%;
-            width: 0%;
-            box-shadow: 0 0 8px 1px white inset;
+        #fill {
+            background: linear-gradient(to bottom, #A3E2EF 35%, #4F9CC0); 
+            box-shadow: 0 0 8px 1px white inset; 
         }
 
         }
@@ -80,9 +39,6 @@
             text-transform: uppercase;
             letter-spacing: 1.5px;
             margin-top: 0.7rem;
-            &:last-child {
-                float: right;
-            }
         }
 
         .topnav {

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
     <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Personal Website</title>
 </head>
 
@@ -56,7 +57,7 @@
           </div>
 -->        
 
-        <div class="main" id="main">
+        <div class="main" id="main" onload=getDocHeight()>
 
             <span class="anchor" id="aboutme_anchor"></span>
 
@@ -140,7 +141,7 @@
                                     <td>Inglês</td>
                                     <td>A-</td>
                                     <td><div id="container">
-                                            <label style="animation: grow-75 4s forwards;">
+                                            <label id="BarraIngles" style="background: linear-gradient(to bottom, #A3E2EF 35%, #4F9CC0); width:0px;">
                                               <div id="fill"></div>
                                             </label>
                                           </div></td>
@@ -149,7 +150,7 @@
                                         <td>C / C++</td>
                                         <td>A+</td>
                                     <td><div id="container">
-                                            <label style="animation: grow-100 4s forwards;">
+                                            <label id="BarraC" style="background: linear-gradient(to bottom, #A3E2EF 35%, #4F9CC0); width:0px;">
                                               <div id="fill"></div>
                                             </label>
                                           </div></td>
@@ -158,7 +159,7 @@
                                         <td>SAP</td>
                                         <td>A</td>
                                     <td><div id="container">
-                                            <label style="animation: grow-100 4s forwards;" for="water">
+                                            <label id="BarraSAP" style="background: linear-gradient(to bottom, #A3E2EF 35%, #4F9CC0); width:0px;" for="water">
                                               <div id="fill"></div>
                                             </label>
                                           </div></td>
@@ -167,7 +168,7 @@
                                         <td>C#</td>
                                         <td>B-</td>
                                     <td><div id="container">
-                                            <label style="animation: grow-50 4s forwards;" for="water">
+                                            <label id="BarraCSHARP" style="background: linear-gradient(to bottom, #A3E2EF 35%, #4F9CC0); width:0px;" for="water">
                                               <div id="fill"></div>
                                             </label>
                                           </div></td>
@@ -176,16 +177,7 @@
                                         <td>JAVA</td>
                                         <td>A</td>
                                     <td><div id="container">
-                                            <label style="animation: grow-100 4s forwards;" for="water">
-                                              <div id="fill"></div>
-                                            </label>
-                                          </div></td>
-                                </tr>
-                                <tr>
-                                        <td>Inglês</td>
-                                        <td>A-</td>
-                                    <td><div id="container">
-                                            <label style="animation: grow-75 4s forwards;" for="water">
+                                            <label id="BarraJAVA" style="background: linear-gradient(to bottom, #A3E2EF 35%, #4F9CC0); width:0px;" for="water">
                                               <div id="fill"></div>
                                             </label>
                                           </div></td>

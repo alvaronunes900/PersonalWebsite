@@ -6,5 +6,26 @@ function myFunction() {
     } else {
         console.log("Mostrar div");
       x.style.display = "block";
+    };
+    
+  }
+
+
+  window.onscroll = function(ev) {
+
+    if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+      carregar('BarraIngles',80);
+      carregar('BarraC',100);
+      carregar('BarraSAP',89);
+      carregar('BarraCSHARP',35);
+      carregar('BarraJAVA',82);
     }
+};
+
+function carregar(id,valor){
+  $('#' + id).animate({
+    width: valor + '%'
+  }, 4000, function(){
+    // terminou
+  });
   }
