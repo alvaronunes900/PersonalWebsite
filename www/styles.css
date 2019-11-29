@@ -1,350 +1,493 @@
-body {
-    background: url("wallpaper.png") fixed;
-    background-repeat: no-repeat;
-    background-color: #cccccc;
-}
+        body {
+            background: url("wallpaper.png") fixed;
+            background-repeat: no-repeat;
+            background-color: #cccccc;
+        }
 
-.navbar {
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 60px;
-    margin: 0 auto;
-}
+        @keyframes grow-100 {
+            from {
+                width: 0%
+              }
+              to {
+                width: 100%;
+              } 
+        }
 
-.navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 28px;
-}
+        @keyframes grow-75 {
+            from {
+              width: 0%
+            }
+            to {
+              width: 75%;
+            }
+        }
 
-.navbar img {
-    float: right;
-    width: 32px;
-    height: 32px;
-}
+        @keyframes grow-50 {
+            from {
+              width: 0%
+            }
+            to {
+              width: 50%;
+            }
+        }
 
-.navbar a:hover {
-    background: #ddd;
-    color: black;
-}
+        @keyframes grow-25 {
+            from {
+              width: 0%
+            }
+            to {
+              width: 25%;
+            }
+        }
 
-.main {
-    display: flex;
-    color: #f2f2f2;
-    flex-flow: column;
-    margin-left: 15%;
-    margin-right: 15%;
-}
+        #container {
+            position: relative;
+            width: 100%;
+        }
 
-.aboutme {
-    display: flex;
-    width: 100%;
-}
+        input {
+            display: none;
+        }
 
-.aboutme h1 {
-    color: orange;
-}
+        #container label {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 40px;
+            background: transparent;
+            border-radius: 0.4rem;
+            border: 2px solid white;
+            overflow: hidden;
+            box-shadow: -2px 0 8px 0 rgba(white, 0.6);
+        }
 
-.text {
-    width: 90%;
-    margin-left: 5%;
-}
+        #container label div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(to bottom, #A3E2EF 35%, #4F9CC0);
+            height: 100%;
+            width: 0%;
+            box-shadow: 0 0 8px 1px white inset;
+        }
 
-.text h1 {
-    text-align: center;
-    margin-left: 20%;
-}
+        }
 
-.social {
-    float: right;
-}
+        #container span {
+            display: inline-block;
+            color: #4F9CC0;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-top: 0.7rem;
+            &:last-child {
+                float: right;
+            }
+        }
 
-.social img {
-    width: 24px;
-    height: 24px;
-    padding: 5px;
-    float: right;
-    display: block;
-    margin: auto;
-}
+        .topnav {
+            display: none;
+        }
 
-.text p {
-    text-align: justify;
-    margin: 5px;
-}
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 60px;
+            margin: 0 auto;
+        }
 
-.photo {
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 40%;
-}
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 28px;
+        }
 
-.photo img {
-    width: 100%;
-    height: 100%;
-}
+        .navbar img {
+            float: right;
+            width: 32px;
+            height: 32px;
+        }
 
-.circular--square {
-    margin-top: 10%;
-    border-radius: 50%;
-}
+        .navbar a:hover {
+            background: #ddd;
+            color: black;
+        }
 
-.progress {
-    margin-top: 50px;
-}
+        .main {
+            display: flex;
+            color: #f2f2f2;
+            flex-flow: column;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
 
-.progress h1 {
-    color: orange;
-}
+        .aboutme {
+            display: flex;
+            width: 100%;
+        }
 
-.path h1 {
-    text-align: center;
-}
+        .aboutme h1 {
+            color: orange;
+        }
 
-.path p {
-    padding: 5px;
-    margin-left: 5%;
-    margin-right: 5%;
-}
+        .text {
+            width: 90%;
+            margin-left: 5%;
+        }
 
-.gallery h1 {
-    font-size: 38px;
-    color: orange;
-}
+        .text h1 {
+            text-align: center;
+            margin-left: 20%;
+        }
 
-.gallery {
-    display: flex;
-    margin-right: 5%;
-    margin-left: 5%;
-}
+        .social {
+            float: right;
+        }
 
-.Esc1 {
-    text-align: center;
-}
+        .social img {
+            width: 24px;
+            height: 24px;
+            padding: 5px;
+            float: right;
+            display: block;
+            margin: auto;
+        }
 
-.Esc1 img {
-    width: 100%;
-    height: 100%;
-}
+        .text p {
+            text-align: justify;
+            margin: 5px;
+        }
 
-.Esc2 {
-    margin-left: 5%;
-    margin-right: 5%;
-    text-align: center;
-}
+        .photo {
+            margin-left: 5%;
+            margin-right: 5%;
+            width: 40%;
+        }
 
-.Esc2 img {
-    width: 100%;
-    height: 100%;
-}
+        .photo img {
+            width: 100%;
+            height: 100%;
+        }
 
-.Esc3 {
-    text-align: center;
-}
+        .circular--square {
+            margin-top: 10%;
+            border-radius: 50%;
+        }
 
-.Esc3 img {
-    width: 100%;
-    height: 100%;
-}
+        .progress {
+            margin-top: 50px;
+        }
 
-/* Slideshow container */
-.slideshow-container {
-    max-width: 500px;
-    margin-top: 200px;
-    position: relative;
-    display: flexbox;
-    margin-left: 5%;
-    margin-right: 5%;
-}
+        .progress h1 {
+            color: orange;
+        }
 
-/* Hide the images by default */
-.mySlides {
-    display: none;
-}
+        .path h1 {
+            text-align: center;
+        }
 
-/* Next & previous buttons */
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    width: auto;
-    padding: 32px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
+        .path p {
+            padding: 5px;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
 
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
+        .skilltab {
+            margin-top: 20rem;
+        }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-    background-color: black;
-}
+        .skilltab h1 {
+            text-align: center;
+        }
 
-/* Caption text */
-.ctext {
-    color: #f2f2f2;
-    font-size: 30px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
+        .skilltab p {
+            padding: 5px;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
 
-/* Number text (1/3 etc) */
-.numbertext {
-    color: white;
-    font-weight: bold;
-    font-size: 24px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
 
-/* The dots/bullets/indicators */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
 
-.active,
-.dot:hover {
-    background-color: #717171;
-}
+        tr:nth-child(even) {
+            background-color: black;
+        }
 
-/* Fading animation */
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
+        .gallery h1 {
+            font-size: 38px;
+            color: orange;
+        }
 
-.anchor {
-    height: 80px;
-}
+        .gallery {
+            height: 300px;
+            display: flex;
+            margin-right: 5%;
+            margin-left: 5%;
+        }
 
-@-webkit-keyframes fade {
-    from {
-        opacity: .4
-    }
+        .main::after {
+            content: " ";
+            clear: both;
+        }
 
-    to {
-        opacity: 1
-    }
-}
+        .Esc1 {
+            text-align: center;
+        }
 
-@keyframes fade {
-    from {
-        opacity: .4
-    }
+        .Esc1 img {
+            width: 100%;
+            height: 100%;
+        }
 
-    to {
-        opacity: 1
-    }
-}
+        .Esc2 {
+            margin-left: 5%;
+            margin-right: 5%;
+            text-align: center;
+        }
 
-@media only screen and (max-width:1300px){
+        .Esc2 img {
+            width: 100%;
+            height: 100%;
+        }
 
-    .anchor{
-        height:50px;
-    }
+        .Esc3 {
+            text-align: center;
+        }
 
-    .aboutme {
-        display: inline-block;
-    }
+        .Esc3 img {
+            width: 100%;
+            height: 100%;
+        }
 
-    .text h1{
-        margin-left: 0%;
-    }
+        /* Slideshow container */
 
-    .photo{
-        width:100%;
-    }
+        .slideshow-container {
+            max-width: 500px;
+            margin-top: 200px;
+            position: relative;
+            display: flexbox;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
 
-    .photo img{
-        width:50%;
-        margin-left: 20%;
-    }
+        /* Hide the images by default */
 
-    .circular--square {
-        border-radius: 0%;
-      }
-}
+        .mySlides {
+            display: none;
+        }
 
+        /* Next & previous buttons */
 
-@media only screen and (max-width: 1159px) {
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 32px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
 
-    .Esc1 img {
-        visibility: hidden;
-    }
+        /* Position the "next button" to the right */
 
-    .Esc2 img {
-        visibility: hidden;
-    }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
 
-    .Esc3 img {
-        visibility: hidden;
-    }
-}
+        /* On hover, add a black background color with a little bit see-through */
 
-@media only screen and (max-width: 900px) {
+        .prev:hover, .next:hover {
+            background-color: black;
+        }
 
-    .social img {
-        display: inline-flex;
-        margin-left: 20%;
-    }
-}
+        /* Caption text */
 
-@media only screen and (max-width: 610px) {
+        .ctext {
+            color: #f2f2f2;
+            font-size: 30px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
 
-    .aboutme {
-        display: inline-block;
-    }
+        /* Number text (1/3 etc) */
 
-    .photo img {
-        width: 85%;
-        margin-top: 0%;
-        margin-left: 3%;
-    }
+        .numbertext {
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
 
-    .social img {
-        display: inline-flex;
-        margin-left: 17%;
-    }
+        /* The dots/bullets/indicators */
 
-    .Esc1 h1 {
-        font-size: 22px;
-    }
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
 
-    .Esc2 h1 {
-        font-size: 22px;
-    }
+        .active, .dot:hover {
+            background-color: #717171;
+        }
 
-    .Esc3 h1 {
-        font-size: 22px;
-    }
-}
+        /* Fading animation */
+
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        .anchor {
+            height: 80px;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @media only screen and (max-width:1300px) {
+            .anchor {
+                height: 50px;
+            }
+            .aboutme {
+                display: inline-block;
+            }
+            .text h1 {
+                margin-left: 0%;
+            }
+            .photo {
+                width: 100%;
+            }
+            .photo img {
+                width: 50%;
+                margin-left: 20%;
+            }
+            .circular--square {
+                border-radius: 0%;
+            }
+        }
+
+        @media only screen and (max-width: 1159px) {
+            .Esc1 img {
+                visibility: hidden;
+            }
+            .Esc2 img {
+                visibility: hidden;
+            }
+            .Esc3 img {
+                visibility: hidden;
+            }
+        }
+
+        @media only screen and (max-width: 900px) {
+            .social img {
+                display: inline-flex;
+                margin-left: 20%;
+            }
+        }
+
+        @media only screen and (max-width: 610px) {
+            .desktop {
+                display: none;
+            }
+            .topnav {
+                display: block;
+                overflow: hidden;
+                background-color: #333;
+                position: relative;
+            }
+            .topnav #myLinks {
+                display: none;
+            }
+            .topnav a {
+                color: white;
+                padding: 14px 16px;
+                text-decoration: none;
+                display: block;
+            }
+            .topnav a.icon {
+                background: black;
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+            .active {
+                background-color: #4CAF50;
+                color: white;
+            }
+            .aboutme {
+                display: inline-block;
+            }
+            .photo img {
+                width: 85%;
+                margin-top: 0%;
+                margin-left: 3%;
+            }
+            .social img {
+                display: inline-flex;
+                margin-left: 17%;
+            }
+            .Esc1 h1 {
+                font-size: 22px;
+            }
+            .Esc2 h1 {
+                font-size: 22px;
+            }
+            .Esc3 h1 {
+                font-size: 22px;
+            }
+        }

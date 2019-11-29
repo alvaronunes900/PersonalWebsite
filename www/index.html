@@ -12,13 +12,13 @@
 
 <body>
     <div class="navbar">
-        <a href="#aboutme_anchor" onclick="alert('ok');">Sobre mim</a>
+        <div class="desktop">
+        <a href="#aboutme_anchor">Sobre mim</a>
         <a href="#progress_anchor">Progresso</a>
-        <a href="#contact">Contact</a>
+        <a href="#skilltab_anchor">Skills</a>
         <div class="social">
             <a href="https://www.facebook.com/alvaro.nunes.14" target="_top">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"
-                    alt="Facebook"></a>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook"></a>
             <a href="https://www.instagram.com/alvaronunes900/" target="_top">
                 <img src="http://pluspng.com/img-png/instagram-png-instagram-png-logo-1455.png" alt="Instagram"></a>
             <a href="mailto:alvnunes@deloitte.pt?Subject=Contact%20me" target="_top">
@@ -26,126 +26,175 @@
         </div>
     </div>
 
-    <div class="main" id="main">
-
-       <span class="anchor" id="aboutme_anchor"></span>
-
-        <div class="aboutme" id="aboutme">
-            <!-- Inicio do container aboutme -->
-            <div class=" text">
-                <!-- Inicio do subcontainer text -->
-                <h1 id="sobremim">Sobre mim</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                    dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.</p><br />
-                <p><b>Sexo : </b>Masculino</p>
-                <p><b>Nacionalidade : </b>Portuguesa</p>
-                <p><b>Data de Nascimento : </b>14/05/2000</p>
-                <!-- Fim do subcontainer text -->
-            </div>
-
-            <div class="photo">
-                <!-- Inicio do subcontainer photo -->
-                <img class="circular--square" src="/Photo.png" alt="Photo">
-                <!-- Fim do subcontainer photo -->
-            </div>
-            <!-- Fim do container aboutme -->
-        </div>
-
-       <span class="anchor" id="progress_anchor"></span>
-
-        <div class="progress" id="progress">
-            <!-- Inicio do container progress -->
-            <div class="introduction">
-                <!-- Inicio do container progress -->
-                <div class="path">
-                    <h1>Percurso académico</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip
-                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                        dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                        deserunt mollit anim id est laborum.</p><br />
-                </div>
-
-                <div class="gallery" id="gallery">
-                    <!-- Inicio do container gallery -->
-                    <!-- Imagem Escola Azeitão -->
-                    <div class="Esc1">
-                        <a href="http://site.aveazeitao.pt/" style="text-decoration:none;">
-                            <h1>Escola Básica de Azeitão</h1>
-                            <img src="/EB23AZT.png" alt="EB 2,3 de Azeitão">
-                        </a>
-                    </div>
-                    <!-- Imagem Escola Palmela -->
-                    <div class="Esc2">
-                        <a href="https://portal.espalmela.net/" style="text-decoration:none;">
-                            <h1>Escola Secundária de Palmela</h1>
-                            <img src="/ESPALMELA.png" alt="Escola Secundária de Palmela">
-                        </a>
-                    </div>
-                    <!-- Imagem Escola Setúbal -->
-                    <div class="Esc3">
-                        <a href="http://www.si.ips.pt/ips_si/web_page.inicial" style="text-decoration:none;">
-                            <h1>Instituto Politécnico Setúbal</h1>
-                            <img src="/IPS.png" alt="IPS">
-                        </a>
-                    </div>
-                    <!-- Fim do container gallery -->
-                </div>
-                <!-- Fim do container introduction -->
-            </div>
-            <!-- Fim do container progress -->
-        </div>
-
-        <!-- Slideshow container -->
-<div class="slideshow-container">
-
-        <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
-          <a href="https://portal.espalmela.net/">
-            <img src="/ESPALMELA.png" alt="Escola Secundária de Palmela">
-        </a>
-          <div class="ctext">Escola Secundária de Palmela</div>
-        </div>
-      
-        <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
-          <img src="EB23AZT.png" style="width:100%">
-          <div class="ctext">Caption Two</div>
-        </div>
-      
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
-          <img src="IPS.png" style="width:100%">
-          <div class="ctext">Caption Three</div>
-        </div>
-      
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-        <div class="teste"><p>testes</p></div>
-      </div>
-      <br>
-      
-      <!-- The dots/circles -->
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-      </div>
+    <div class="topnav">
+            <a href="#aboutme_anchor" class="active">Inicio</a>
+            <div id="myLinks">
+                    <a href="#progress_anchor">Progresso</a>
+                    <a href="#skilltab_anchor">Skills</a>
+                  </div>
+                  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                  </a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
     </div>
 
+ <!--   <div class="topnav">
+            <a href="#aboutme_anchor" class="active">Inicio</a>
+            <div id="myLinks">
+                    <a href="#progress_anchor">Progresso</a>
+                    <a href="#skilltab_anchor">Skills</a>
+                  </div>
+                  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                  </a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+-->        
+
+        <div class="main" id="main">
+
+            <span class="anchor" id="aboutme_anchor"></span>
+
+            <div class="aboutme" id="aboutme">
+                <!-- Inicio do container aboutme -->
+                <div class=" text">
+                    <!-- Inicio do subcontainer text -->
+                    <h1 id="sobremim">Sobre mim</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br />
+                    <p><b>Sexo : </b>Masculino</p>
+                    <p><b>Nacionalidade : </b>Portuguesa</p>
+                    <p><b>Data de Nascimento : </b>14/05/2000</p>
+                    <!-- Fim do subcontainer text -->
+                </div>
+
+                <div class="photo">
+                    <!-- Inicio do subcontainer photo -->
+                    <img class="circular--square" src="/Photo.png" alt="Photo">
+                    <!-- Fim do subcontainer photo -->
+                </div>
+                <!-- Fim do container aboutme -->
+            </div>
+
+            <span class="anchor" id="progress_anchor"></span>
+
+            <div class="progress" id="progress">
+                <!-- Inicio do container progress -->
+                <div class="introduction">
+                    <!-- Inicio do container progress -->
+                    <div class="path">
+                        <h1>Percurso académico</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br />
+                    </div>
+
+                    <div class="gallery" id="gallery">
+                        <!-- Inicio do container gallery -->
+                        <!-- Imagem Escola Azeitão -->
+                        <div class="Esc1">
+                            <a href="http://site.aveazeitao.pt/" style="text-decoration:none;">
+                                <h1>Escola Básica de Azeitão</h1>
+                                <img src="/EB23AZT.png" alt="EB 2,3 de Azeitão">
+                            </a>
+                        </div>
+                        <!-- Imagem Escola Palmela -->
+                        <div class="Esc2">
+                            <a href="https://portal.espalmela.net/" style="text-decoration:none;">
+                                <h1>Escola Secundária de Palmela</h1>
+                                <img src="/ESPALMELA.png" alt="Escola Secundária de Palmela">
+                            </a>
+                        </div>
+                        <!-- Imagem Escola Setúbal -->
+                        <div class="Esc3">
+                            <a href="http://www.si.ips.pt/ips_si/web_page.inicial" style="text-decoration:none;">
+                                <h1>Instituto Politécnico Setúbal</h1>
+                                <img src="/IPS.png" alt="IPS">
+                            </a>
+                        </div>
+                        <!-- Fim do container gallery -->
+                    </div>
+                    <!-- Fim do container introduction -->
+                </div>
+                <!-- Fim do container progress -->
+                <div class="skilltab" id="skilltab">
+
+
+                    <span class="anchor" id="skilltab_anchor"></span>
+                    <!-- Inicio do container progress -->
+                    <div class="skilltab_info">
+                        <!-- Inicio do container progress -->
+                        <div class="skilltab_cont">
+                            <h1>Skill Table</h1>
+                            <table>
+                                <tr>
+                                    <th>Skill</th>
+                                    <th>Nível de Competência</th>
+                                    <th>Conhecimento</th>
+                                </tr>
+                                <tr>
+                                    <td>Inglês</td>
+                                    <td>A-</td>
+                                    <td><div id="container">
+                                            <label style="animation: grow-75 4s forwards;">
+                                              <div id="fill"></div>
+                                            </label>
+                                          </div></td>
+                                </tr>
+                                <tr>
+                                        <td>C / C++</td>
+                                        <td>A+</td>
+                                    <td><div id="container">
+                                            <label style="animation: grow-100 4s forwards;">
+                                              <div id="fill"></div>
+                                            </label>
+                                          </div></td>
+                                </tr>
+                                <tr>
+                                        <td>SAP</td>
+                                        <td>A</td>
+                                    <td><div id="container">
+                                            <label style="animation: grow-100 4s forwards;" for="water">
+                                              <div id="fill"></div>
+                                            </label>
+                                          </div></td>
+                                </tr>
+                                <tr>
+                                        <td>C#</td>
+                                        <td>B-</td>
+                                    <td><div id="container">
+                                            <label style="animation: grow-50 4s forwards;" for="water">
+                                              <div id="fill"></div>
+                                            </label>
+                                          </div></td>
+                                </tr>
+                                <tr>
+                                        <td>JAVA</td>
+                                        <td>A</td>
+                                    <td><div id="container">
+                                            <label style="animation: grow-100 4s forwards;" for="water">
+                                              <div id="fill"></div>
+                                            </label>
+                                          </div></td>
+                                </tr>
+                                <tr>
+                                        <td>Inglês</td>
+                                        <td>A-</td>
+                                    <td><div id="container">
+                                            <label style="animation: grow-75 4s forwards;" for="water">
+                                              <div id="fill"></div>
+                                            </label>
+                                          </div></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div style="height:100px;"></div>
 </body>
 
 </html>
